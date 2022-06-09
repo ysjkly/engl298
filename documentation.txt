@@ -1,0 +1,6 @@
+* Still need to debug, may update a new version later.
+* To play this game, download the zip and uncompress it. 
+* The position of each file should not be changed.
+* Open the HTML file "project2.html" in the browser, best with Chrome.
+
+* The purpose of this game is to hope that players can feel the difficulty of Korean civilians trying to survive in the war through this game. As civilians,  they could not get enough information about the war around them or know what would happen next. Players can restart the game when it leads to a bad ending but the civilians never had a second chance. Even if they were lucky enough to live through the war, they still lost so many things, such their family members or their homeland.

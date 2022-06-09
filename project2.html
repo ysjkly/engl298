@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <title>RPG: Back to Korea War</title>
+    <link href='styles.css' rel='stylesheet' />
+    <script src='index.js'></script>
+  </head>
+  <body>
+    <header>
+      <h1>RPG: Back to Korea War</h1>
+    </header>
+
+    <main>
+      <!-- 开始页+游戏简介 -->
+      <div id="start-page">
+        <h2><u>ABOUT THIS GAME</u></h2>
+        <p>
+          In this little role play game, your character is a civilian living in Korea during the
+          Korea War. You will need to make decisions when questions and their choices appear on
+          the screen. Be careful with the choices you make. Each different option could lead to a
+          very different ending. Your goal is to stay alive as long as possible. Let's
+          see how long you can survive in the war.
+        </p>
+        <button id="start-btn">START NOW!</button>
+      </div>
+      <div id="game" class="hidden">
+        <!-- 当前事件 -->
+        <div id="current" class="hidden">
+          <h3>Current Event</h3>
+          <div id="current-date">
+            <p></p>
+          </div>
+          <p></p>
+          <section id="choices">
+            <button id="choice1" class="hidden"></button>
+            <button id="choice2" class="hidden"></button>
+            <button id="choice3" class="hidden"></button>
+          </section>
+        </div>
+        <section>  <!--class="hidden"> -->
+          <button id="end-btn">End the game</button>
+          <button id="restart-btn">Restart</button>
+        </section>
+      </div>
+      <!-- pic -->
+      <div id="pic-container">
+      </div>
+      <!-- 过去事件 -->
+      <div id="past" class="hidden">
+        <h3>Past Events</h3>
+        <div></div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <!-- Image credits:
+        <a href='https://bulbapedia.bulbagarden.net/wiki/Bulbapedia:Copyrights'>Bulbapedia</a>
+        (characters &copy; by Nintendo) -->
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+body, button {
+  color: #222;
+  font-family:'Courier New', Courier, monospace;
+}
+
+body {
+  background-image: url("img/background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.hidden {
+  display: none !important;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* #game, #past {
+  display: flex;
+}
+
+#game>section {
+  display: block;
+} */
+
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#date p {
+  font-size: 20pt;
+  font-weight: bold;
+  /* width: 15%; */
+  margin-right: 3%;
+}
+
+button {
+  cursor: pointer;
+}
+
+#choices button {
+  background-color: #99999989;
+  border: 5px rgba(56, 56, 56, 0.489);
+  border-style: groove;
+  border-radius: 6px;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.361);
+  font-size: 12pt;
+  padding: 10px;
+  margin: 5px 10px 5px 10px;
+  text-align: left;
+  transition-duration: 0.4s;
+  width: 80%;
+}
+
+.past-date, #current-date {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+#start-page {
+  margin: auto;
+  width: 50%;
+}
+
+#start-btn, #end-btn, #restart-btn {
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: rgba(97, 97, 97, 0.421);
+}
+
+#start-btn {
+  font-size: larger;
+  text-decoration: underline;
+  margin: auto;
+  display: flex
+}
+
+#start-page p {
+  line-height: 2em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#current, #past {
+  height: 520px;
+  width: 400px;
+  border: 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  overflow-y: scroll;
+}
+
+/* #current {
+  margin-left: 10%;
+}
+
+#past {
+  margin-right: 100px;
+} */
+
+.past-event {
+  border: 2px solid;
+  padding: 5px;
+  display: flexbox;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+}
+
+/* #pic-container {
+  display: flex;
+  position: relative;
+} */
+
+#pic-container img{
+  max-width: 400px;
+}
