@@ -1,109 +1,11 @@
 "use strict";
 (function() {
 
-  window.addEventListener("load", init);
-
-  function init() {
-    id("start-btn").addEventListener("click", startGame);
-    id("end-btn").addEventListener("click", endGame);
-    id("restart-btn").addEventListener("click", restart);
-    let btn = qsa("#choices button");
-    for (let i = 0; i < btn.length; i++) {
-      btn[i].addEventListener("click", next);
-    }
-  }
-
-  function startGame() {
-    toggleHidden();
-    generateBoard("start");
-  }
-
-  function next() {
-    let cEvent = qs("#game>section").id;
-    let cChoice = this.id;
-    // 复制到past
-    let past = gen("section");
-    let date = gen("p");
-    date.textContent=qs("#current-date p").textContent;
-    date.classList.add("past-date")
-    past.appendChild(date);
-    let event = gen("p");
-    event.textContent = qs("#current > p").textContent;
-    past.classList.add("past-event")
-    past.appendChild(event);
-    if (data[cEvent].type === "question") {
-      let ans = gen("p");
-      ans.innerHTML="Your choice is: <span>" + this.textContent + "</span>";
-      past.appendChild(ans);
-    }
-    qs("#past div").appendChild(past);
-    // 创建新事件
-    let next = data[cEvent].choices[cChoice].next;
-    let nEvent=data[next];
-    console.log(nEvent)
-    generateBoard(next);
-    if (nEvent["type"] === "ending") {
-      generateBoard(next);
-      hindBtn();
-    }
-  }
-
-  function ending() {
-    hindBtn();
-  }
-
-  function endGame() {
-    hindBtn();
-    toggleHidden();
-    qs("#past > div").innerHTML = "";
-  }
-
-  function restart() {
-    hindBtn();
-    qs("#past > div").innerHTML = "";
-    generateBoard("start");
-  }
-
-  function generateBoard(event) {
-    hindBtn();
-    let current = data[event];
-    qs("#current-date p").textContent=current.date;
-    qs("#current > p").textContent=current.description;
-    qs("#game>section").id=event;
-    let btn = qsa("#choices button");
-    for (let i = 0; i < Object.keys(current["choices"]).length; i++) {
-      let choice = btn[i].id;
-      btn[i].textContent = current.choices[choice].description;
-      btn[i].classList.remove("hidden");
-    }
-    qs("#pic-container").innerHTML = "";
-    if (current.img !== undefined) {
-      let img = gen("img");
-      img.src = current.img;
-      qs("#pic-container").appendChild(img);
-    }
-    qs("footer p").textContent = current["footer"];
-  }
-
-  function hindBtn() {
-    let btn = qsa("#choices button");
-    for (let i = 0; i < btn.length; i++) {
-      btn[i].classList.add("hidden");
-    }
-  }
-
-  function toggleHidden() {
-    id("game").classList.toggle("hidden");
-    id("current").classList.toggle("hidden");
-    id("past").classList.toggle("hidden");
-    id("start-page").classList.toggle("hidden");
-  }
-
   const data = {
     "start":{
       "date":"June 25, 1950",
       "type":"info",
-      "description":"During WWII, the Korean peninsula was colonized by the Empire of Japan."+
+      "description":"During WWII, the Korean peninsula was colonized by the Empire of Japan. "+
       "On August 9, 1945, on the eve of Japan's defeat and surrender, the U.S. proposed and the Soviet Union approved a proposal to occupy the southern and northern parts of the Korean Peninsula, respectively, using the 38th parallel as the boundary.",
       "choices":{
         "choice1": {
@@ -111,6 +13,7 @@
           "next":"position"
         }
       },
+      "img":"img/japan.jpeg",
       "footer":"",
     },
     "position":{
@@ -127,7 +30,7 @@
           "next":"915"
         }
       },
-      "footer":"",
+      "footer":"Image edited from: https://www.worldatlas.com/webimage/countrys/asia/outline/koreanpnout.htm",
       "img":"img/koreanpeninsula.jpg"
     },
     "628":{
@@ -229,7 +132,7 @@
     "ship1":{
       "date":"December 10, 1950",
       "type":"question",
-      "description":"You heard that the U.S. corps plan to retreat from Hŭngnam, a port city near Hamhung. Do you want to go to Hŭngnam and follow the U.S. corps to leave for South Korea?",
+      "description":"You hear that the U.S. corps plan to retreat from Hŭngnam, a port city near Hamhung. Do you want to go to Hŭngnam and follow the U.S. corps to leave for South Korea?",
       "choices":{
         "choice1": {
           "description":"Yes",
@@ -283,9 +186,9 @@
       "footer":""
     },
     "ship4":{
-      "date":"December 24, 1950",
+      "date":"December 26, 1950",
       "type":"info",
-      "description":"to geoje",
+      "description":"You are on the ship SS Meredith Victory. You hope that you can see your family after the ship stops. The ship arrives in Busan now, but there are already too many refugees in Busan, so the ship of North Korean refugees has to continue its voyage to Geoje Island.",
       "choices":{
         "choice1": {
           "description":"Continue",
@@ -310,6 +213,30 @@
       },
       "footer":""
     },
+    "OE1":{
+      "date":"Ending",
+      "type":"ending",
+      "description":"You arrive in Geoje Island. There, you no longer need to worry about flames of the war. But you still cannot find your family members anywhere even after the war ends. You guess they are left in North Korea. How are they now? You have no ideas on this. You wish they are not killed during the war, and maybe some day, you can meet again.",
+      "choices":{
+      },
+      "footer":""
+    },
+    "":{
+      "date":"",
+      "type":"",
+      "description":"",
+      "choices":{
+        "choice1": {
+          "description":"",
+          "next":""
+        },
+        "choice2": {
+          "description":"",
+          "next":""
+        }
+      },
+      "footer":""
+    },
     "":{
       "date":"",
       "type":"",
@@ -327,11 +254,109 @@
       "footer":""
     },
     "BE1":{
-      "date":"",
+      "date":"Ending",
       "type":"ending",
-      "description": "You did not know that the wounded man is a communist. You are noticed by the South Korea force and are considered as a communist sympathizer and are killed.",
+      "description": "You did not know that the wounded man is a communist. You are noticed by the South Korea force and are considered as a communist sympathizer. You are killed.",
       "choices":{}
     }
+  }
+
+  window.addEventListener("load", init);
+
+  function init() {
+    id("start-btn").addEventListener("click", startGame);
+    id("end-btn").addEventListener("click", endGame);
+    id("restart-btn").addEventListener("click", restart);
+    let btn = qsa("#choices button");
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].addEventListener("click", next);
+    }
+  }
+
+  function startGame() {
+    toggleHidden();
+    generateBoard("start");
+  }
+
+  function next() {
+    let cEvent = qs("#game>section").id;
+    let cChoice = this.id;
+    // 复制到past
+    let past = gen("section");
+    let date = gen("p");
+    date.textContent=qs("#current-date p").textContent;
+    date.classList.add("past-date")
+    past.appendChild(date);
+    let event = gen("p");
+    event.textContent = qs("#current > p").textContent;
+    past.classList.add("past-event")
+    past.appendChild(event);
+    if (data[cEvent].type === "question") {
+      let ans = gen("p");
+      ans.innerHTML="Your choice is: <span>" + this.textContent + "</span>";
+      past.appendChild(ans);
+    }
+    qs("#past div").appendChild(past);
+    // 创建新事件
+    let next = data[cEvent].choices[cChoice].next;
+    let nEvent=data[next];
+    console.log(nEvent)
+    generateBoard(next);
+    if (nEvent["type"] === "ending") {
+      generateBoard(next);
+      hindBtn();
+    }
+  }
+
+  function ending() {
+    hindBtn();
+  }
+
+  function endGame() {
+    hindBtn();
+    toggleHidden();
+    qs("#past > div").innerHTML = "";
+  }
+
+  function restart() {
+    hindBtn();
+    qs("#past > div").innerHTML = "";
+    generateBoard("start");
+  }
+
+  function generateBoard(event) {
+    hindBtn();
+    let current = data[event];
+    qs("#current-date p").textContent=current.date;
+    qs("#current > p").textContent=current.description;
+    qs("#game>section").id=event;
+    let btn = qsa("#choices button");
+    for (let i = 0; i < Object.keys(current["choices"]).length; i++) {
+      let choice = btn[i].id;
+      btn[i].textContent = current.choices[choice].description;
+      btn[i].classList.remove("hidden");
+    }
+    qs("#pic-container").innerHTML = "";
+    if (current.img !== undefined) {
+      let img = gen("img");
+      img.src = current.img;
+      qs("#pic-container").appendChild(img);
+    }
+    qs("footer p").textContent = current["footer"];
+  }
+
+  function hindBtn() {
+    let btn = qsa("#choices button");
+    for (let i = 0; i < btn.length; i++) {
+      btn[i].classList.add("hidden");
+    }
+  }
+
+  function toggleHidden() {
+    id("game").classList.toggle("hidden");
+    id("current").classList.toggle("hidden");
+    id("past").classList.toggle("hidden");
+    id("start-page").classList.toggle("hidden");
   }
 
   function gen(tagName) {
