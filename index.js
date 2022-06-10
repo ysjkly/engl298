@@ -6,15 +6,16 @@
       "date":"June 25, 1950",
       "type":"info",
       "description":"During WWII, the Korean peninsula was colonized by the Empire of Japan. "+
-      "On August 9, 1945, on the eve of Japan's defeat and surrender, the U.S. proposed and the Soviet Union approved a proposal to occupy the southern and northern parts of the Korean Peninsula, respectively, using the 38th parallel as the boundary.",
+      "On August 9, 1945, on the eve of Japan's defeat and surrender, the U.S. proposed and the Soviet Union approved a proposal to occupy the southern and northern parts of the Korean Peninsula, respectively, using the 38th parallel, or latitude 38° N, as the boundary.",
       "choices":{
         "choice1": {
           "description":"Continue",
           "next":"position"
         }
       },
-      "img":"img/japan.jpeg",
-      "footer":"",
+      "img":"img/japan.jpg",
+      "footer":"Image credit: <a href='https://www.shutterstock.com/image-illustration/hand-drawn-map-japanese-empire-largest-615098075'>shutterstock</a><br>" +
+      "Source: <a href='https://www.nationalgeographic.com/science/article/130805-korean-war-dmz-armistice-38-parallel-geography'>National Geographic, Korea, and the 38th Parallel</a>",
     },
     "position":{
       "date":"June 25, 1950",
@@ -30,7 +31,7 @@
           "next":"915"
         }
       },
-      "footer":"Image edited from: https://www.worldatlas.com/webimage/countrys/asia/outline/koreanpnout.htm",
+      "footer":"Image edited from: <a href='https://www.worldatlas.com/webimage/countrys/asia/outline/koreanpnout.htm'>worldatlas</a>",
       "img":"img/koreanpeninsula.jpg"
     },
     "628":{
@@ -43,19 +44,19 @@
           "next":"927"
         }
       },
-      "footer":"Source: https://history.army.mil/reference/korea/kw-chrono.htm"
+      "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'The Korean War Chronology</a>"
     },
     "915":{
       "date":"September 15, 1950",
       "type":"info",
-      "description":"UN forces, mainly U.S. forces, get involved today to help South Korea.",
+      "description":"UN forces, mainly the U.S. forces, get involved today to help South Korea.",
       "choices":{
         "choice1": {
           "description":"Continue",
           "next":"101"
         }
       },
-      "footer":"Source: https://history.army.mil/reference/korea/kw-chrono.htm"
+      "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'>The Korean War Chronology</a>"
     },
     "927":{
       "date":"September 27, 1950",
@@ -79,7 +80,7 @@
           "next":"SK1"
         }
       },
-      "footer":""
+      "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'>The Korean War Chronology</a>"
     },
     "a wounded":{
       "date":"September 28, 1950",
@@ -183,7 +184,8 @@
           "next":"1224"
         }
       },
-      "footer":""
+      "img":"img/board.jpeg",
+      "footer":"Image credit: U.S. Army"
     },
     "ship4":{
       "date":"December 26, 1950",
@@ -195,7 +197,8 @@
           "next":"OE1"
         },
       },
-      "footer":""
+      "img":"img/crowd.jpeg",
+      "footer":"Image credit: U.S. Army"
     },
     "1224":{
       "date":"December 24, 1950",
@@ -216,7 +219,7 @@
     "OE1":{
       "date":"Ending",
       "type":"ending",
-      "description":"You arrive in Geoje Island. There, you no longer need to worry about flames of the war. But you still cannot find your family members anywhere even after the war ends. You guess they are left in North Korea. How are they now? You have no ideas on this. You wish they are not killed during the war, and maybe some day, you can meet again.",
+      "description":"You arrive in Geoje Island. There, you no longer need to worry about flames of the war. But you still cannot find your family members anywhere even after the war ends. You guess they are left in North Korea. How are they now? You have no ideas about this. You wish they are not killed during the war, and maybe some day, you can meet again.",
       "choices":{
       },
       "footer":""
@@ -342,7 +345,7 @@
       img.src = current.img;
       qs("#pic-container").appendChild(img);
     }
-    qs("footer p").textContent = current["footer"];
+    qs("footer p").innerHTML = current["footer"];
   }
 
   function hindBtn() {
