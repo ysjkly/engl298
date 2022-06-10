@@ -1,6 +1,7 @@
 body, button {
   color: #222;
   font-family:'Courier New', Courier, monospace;
+  height: 100%;
 }
 
 body {
@@ -19,14 +20,6 @@ main {
   justify-content: space-between;
 }
 
-/* #game, #past {
-  display: flex;
-}
-
-#game>section {
-  display: block;
-} */
-
 h1 {
   margin-bottom: 15px;
   text-align: center;
@@ -35,7 +28,6 @@ h1 {
 #date p {
   font-size: 20pt;
   font-weight: bold;
-  /* width: 15%; */
   margin-right: 3%;
 }
 
@@ -44,7 +36,7 @@ button {
 }
 
 #choices button {
-  background-color: #99999989;
+  background-color: #62513f89;
   border: 5px rgba(56, 56, 56, 0.489);
   border-style: groove;
   border-radius: 6px;
@@ -94,7 +86,22 @@ button {
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
+}
+
+#past div {
+  /* margin-top: 35px; */
+  height: 473px;
+  width: 400px;
   overflow-y: scroll;
+}
+
+#current-date {
+  margin-top: 20px;
+}
+
+#current h3, #past h3 {
+  position: relative;
+  padding-top: -10px;
 }
 
 /* #current {
@@ -107,7 +114,8 @@ button {
 
 .past-event {
   border: 2px solid;
-  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   display: flexbox;
 }
 
