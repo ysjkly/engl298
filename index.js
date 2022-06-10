@@ -207,11 +207,11 @@
       "choices":{
         "choice1": {
           "description":"walk to South Korea",
-          "next":""
+          "next":"toSK2"
         },
         "choice2": {
           "description":"stay in North Korea",
-          "next":""
+          "next":"NK1"
         }
       },
       "footer":""
@@ -219,15 +219,51 @@
     "OE1":{
       "date":"Ending",
       "type":"ending",
-      "description":"You arrive in Geoje Island. There, you no longer need to worry about flames of the war. But you still cannot find your family members anywhere even after the war ends. You guess they are left in North Korea. How are they now? You have no ideas about this. You wish they are not killed during the war, and maybe some day, you can meet again.",
+      "description":"You arrive in Geoje Island. There, you no longer need to worry about flames of the war. But you still cannot find your family members anywhere even after the war ends. You guess they are left in North Korea. How are they now? You have no ideas about this. You wish they are not killed during the war, and maybe some day, you can meet them again.",
       "choices":{
       },
       "footer":""
     },
-    "":{
-      "date":"",
+    "SK2":{
+      "date":"December 25, 1950",
+      "type":"question",
+      "description":"The U.S. army evacuates from Hŭngnam Port quickly. The communist forces is coming soon. You plan to...?",
+      "choices":{
+        "choice1": {
+          "description":"walk to South Korea",
+          "next":"toSK2"
+        },
+        "choice2": {
+          "description":"stay in North Korea",
+          "next":"NK1"
+        }
+      },
+      "footer":""
+    },
+    "toSK2":{
+      "date":"December 25, 1950",
+      "type":"question",
+      "description":"When do you plan to leave?",
+      "choices":{
+        "choice1": {
+          "description":"Today",
+          "next":"toSK2.1"
+        },
+        "choice2": {
+          "description":"Tomorrow",
+          "next":"toSK2.2"
+        },
+        "choice3": {
+          "description":"Wait a few days",
+          "next":"toSK2.3"
+        }
+      },
+      "footer":""
+    },
+    "NK1":{
+      "date":"December 25, 1950",
       "type":"",
-      "description":"",
+      "description":"You don't know where is safer if there could be battles anywhere, so you choose to stay.",
       "choices":{
         "choice1": {
           "description":"",
@@ -237,6 +273,29 @@
           "description":"",
           "next":""
         }
+      },
+      "footer":""
+    },
+    "toSK2.1":{
+      "date":"Ending",
+      "type":"",
+      "description":"You and your family successfully arrive in Busan.",
+      "choices":{
+      },
+      "footer":""
+    },
+    "toSK2.2":{
+      "date":"Ending",
+      "type":"ending",
+      "description":"killed by the U.S. army as a suspicious communist",
+      "choices":{},
+      "footer":""
+    },
+    "toSK2.3":{
+      "date":"Ending",
+      "type":"ending",
+      "description":"You are hurt in a bombing, but finally arrive in Busan.",
+      "choices":{
       },
       "footer":""
     },
@@ -309,10 +368,6 @@
       generateBoard(next);
       hindBtn();
     }
-  }
-
-  function ending() {
-    hindBtn();
   }
 
   function endGame() {
