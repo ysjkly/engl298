@@ -236,7 +236,7 @@
         },
         "choice2": {
           "description":"stay in North Korea",
-          "next":"NK1"
+          "next":"NK"
         }
       },
       "footer":""
@@ -261,17 +261,17 @@
       },
       "footer":""
     },
-    "NK1":{
+    "NK":{
       "date":"December 25, 1950",
       "type":"question",
-      "description":"You don't know where is safer if there could be battles anywhere, so you choose to stay.",
+      "description":"You don't know where is safer if there could be battles anywhere, so you choose to stay in North Korea. Where do you want to go now?",
       "choices":{
         "choice1": {
-          "description":"",
+          "description":"Keep away from cities",
           "next":"NK1.1"
         },
         "choice2": {
-          "description":"",
+          "description":"Stay where you are now.",
           "next":"NK1.2"
         }
       },
@@ -288,7 +288,7 @@
     "toSK2.2":{
       "date":"Ending",
       "type":"ending",
-      "description":"killed by the U.S. army as a suspicious communist",
+      "description":"You are killed by the U.S. army as a suspicious communist",
       "choices":{},
       "footer":""
     },
@@ -303,7 +303,7 @@
     "NK1.1":{
       "date":"Ending",
       "type":"ending",
-      "description":"You survive in North Korea, but no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
+      "description":"Though bombings happen very often, the main air raid targets are the cities. You luckily survive in North Korea, but no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
       "choices":{
       },
       "footer":""
@@ -311,7 +311,7 @@
     "NK1.2":{
       "date":"Ending",
       "type":"ending",
-      "description":"You die in a bombing from the U.S. air force.",
+      "description":"You are killed in an air raid from the U.S. air force. A large amount of North Korean cities are devastrated in air raids.",
       "choices":{
       },
       "footer":""
