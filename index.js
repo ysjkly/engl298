@@ -263,16 +263,16 @@
     },
     "NK1":{
       "date":"December 25, 1950",
-      "type":"",
+      "type":"question",
       "description":"You don't know where is safer if there could be battles anywhere, so you choose to stay.",
       "choices":{
         "choice1": {
           "description":"",
-          "next":""
+          "next":"NK1.1"
         },
         "choice2": {
           "description":"",
-          "next":""
+          "next":"NK1.2"
         }
       },
       "footer":""
@@ -296,6 +296,22 @@
       "date":"Ending",
       "type":"ending",
       "description":"You are hurt in a bombing, but finally arrive in Busan.",
+      "choices":{
+      },
+      "footer":""
+    },
+    "NK1.1":{
+      "date":"Ending",
+      "type":"ending",
+      "description":"You survive in North Korea, but no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
+      "choices":{
+      },
+      "footer":""
+    },
+    "NK1.2":{
+      "date":"Ending",
+      "type":"ending",
+      "description":"You die in a bombing from the U.S. air force.",
       "choices":{
       },
       "footer":""
