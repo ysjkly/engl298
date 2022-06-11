@@ -304,9 +304,9 @@
     "toSK2.2":{
       "date":"Ending",
       "type":"ending",
-      "description":"You are killed by the U.S. army as a suspicious communist.",
+      "description":"Unluckily, you are killed in a bombing.",
       "choices":{},
-      "footer":""
+      "footer":"Source: <a href='http://peacehistory-usfp.org/korean-war/'>The Korean War: Barbarism Unleashed</a>"
     },
     "toSK2.3":{
       "date":"Ending",
@@ -314,7 +314,7 @@
       "description":"You are hurt in a bombing, but finally arrive in Busan. Life is hard there with lots of refugees, but congratulation, at least you survives. Perhaps you can have a better life after the war ends.",
       "choices":{
       },
-      "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea"
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
     },
     "NK1.1":{
       "date":"Ending",
@@ -333,20 +333,40 @@
       "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
     },
     "toSK":{
-      "date":"",
-      "type":"",
-      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea.",
+      "date":"October 10, 1950",
+      "type":"question",
+      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea. On the way, you see a little without her parents. You decide to...?",
       "choices":{
         "choice1": {
-          "description":"",
-          "next":""
+          "description":"Help her",
+          "next":"help"
         },
         "choice2": {
-          "description":"",
-          "next":""
+          "description":"Ignore her.",
+          "next":"suspected"
         }
       },
       "footer":""
+    },
+    "help":{
+      "date":"Ending",
+      "type":"info",
+      "description":"To help the little girl, you delay two days before arriving in South Korea, and miss the massacre of suspected communists in South Korea.",
+      "choices":{
+        "choice1": {
+          "description":"Continue",
+          "next":"toSK2.1"
+        }
+      },
+      "footer":"<a href='https://en.wikipedia.org/wiki/List_of_massacres_in_South_Korea'>List of massacres in South Korea</a>"
+    },
+    "suspected":{
+      "date":"Ending",
+      "type":"ending",
+      "description":"When you arrive in South Korea, you are killed as a suspected communist",
+      "choices":{
+      },
+      "footer":"Source: <a href='http://peacehistory-usfp.org/korean-war/'>The Korean War: Barbarism Unleashed</a>"
     },
     "village":{
       "date":"July 25, 1950",
@@ -359,7 +379,7 @@
         },
         "choice2": {
           "description":"No",
-          "next":""
+          "next":"toSK2.1"
         }
       },
       "footer":""
