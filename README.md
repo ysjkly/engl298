@@ -1,6 +1,6 @@
 # RPG: Back to Korea War
 * This is a project for sequence 2 of sp22 ENGL 298 of University of Washington.
-* It is a small textual role play game and the charater of the player is a civilian of Korea during the Korean War.
+* It is a simple textual role play game and the character of the player is a civilian of Korea during the Korean War.
 * To play the game, please click [this link](https://ysjkly.github.io/engl298/).
 
 ## Limitation
