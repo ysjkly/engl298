@@ -177,7 +177,7 @@
           "next":"SK2"
         }
       },
-      "footer":"Source: <a href='https://arsof-history.org/articles/v7n1_hungnam_page_1.html'>The Refugee Evacuation from HUngnam</a>"
+      "footer":"Source: <a href='https://arsof-history.org/articles/v7n1_hungnam_page_1.html'>The Refugee Evacuation from Hungnam</a>"
     },
     "cn":{
       "date":"October 19, 1950",
@@ -387,7 +387,7 @@
     "village":{
       "date":"July 25, 1950",
       "type":"question",
-      "description":"Today, you pass through a village. Do you want to take a rest there",
+      "description":"Today, you pass through a village. Do you want to take a rest there?",
       "choices":{
         "choice1": {
           "description":"Yes",
