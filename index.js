@@ -117,17 +117,17 @@
     },
     "further-south":{
       "date":"September 29, 1950",
-      "type":"question",
-      "description":"Do you want to go further south this time?",
+      "type":"info",
+      "description":"You decide to go further south this time.",
       "choices":{
         "choice1": {
-          "description":"Yes",
-          "next":"toSK2.1"
-        },
-        "choice2": {
-          "description":"No",
-          "next":"staySeoul"
-        }
+          "description":"Continue",
+          "next":"toSK2.1"}
+        // },
+        // "choice2": {
+        //   "description":"No",
+        //   "next":"staySeoul"
+        // }
       },
       "footer":""
     },
@@ -443,7 +443,7 @@
     "BE1":{
       "date":"Ending",
       "type":"ending",
-      "description": "You did not know that the wounded man is a communist. You are noticed by the South Korea force and are considered as a communist sympathizer. You are killed.",
+      "description": "You did not know that the wounded man is a communist. You are noticed by the South Korea force and are considered as a communist sympathizer. You and your family are killed.",
       "choices":{},
       "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bodo_League_massacre#cite_note-John_Tirman_2011-10'>Bodo League massacre</a><br><a href='https://www.smh.com.au/world/south-korea-owns-up-to-brutal-past-20081115-gdt2yw.html'>South Korea owns up to brutal past</a>"
     }
