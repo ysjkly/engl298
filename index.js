@@ -317,9 +317,9 @@
       "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
     },
     "toSK":{
-      "date":"",
+      "date":"November 5, 1950",
       "type":"",
-      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea.",
+      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea. Today, you pass through a village. ",
       "choices":{
         "choice1": {
           "description":"",
@@ -352,7 +352,8 @@
       "date":"Ending",
       "type":"ending",
       "description": "You did not know that the wounded man is a communist. You are noticed by the South Korea force and are considered as a communist sympathizer. You are killed.",
-      "choices":{}
+      "choices":{},
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bodo_League_massacre#cite_note-John_Tirman_2011-10'>Bodo League massacre</a><br><a href='https://www.smh.com.au/world/south-korea-owns-up-to-brutal-past-20081115-gdt2yw.html'>South Korea owns up to brutal past</a>"
     }
   }
 
