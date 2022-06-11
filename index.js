@@ -70,7 +70,7 @@
       "choices":{
         "choice1": {
           "description":"Continue",
-          "next":"101"
+          "next":"927"
         }
       },
       "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'>The Korean War Chronology</a>"
