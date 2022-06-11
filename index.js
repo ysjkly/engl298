@@ -391,7 +391,7 @@
       "choices":{
         "choice1": {
           "description":"Yes",
-          "next":"GNR1"
+          "next":"NGR1"
         },
         "choice2": {
           "description":"No",
