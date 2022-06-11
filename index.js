@@ -110,14 +110,30 @@
         },
         "choice2": {
           "description":"No",
-          "next":""
+          "next":"further-south"
         }
       },
       "footer":""
     },
     "further-south":{
-      "date":"June 29th ",
+      "date":"September 29, 1950",
       "type":"question",
+      "description":"Do you want to go further south this time?",
+      "choices":{
+        "choice1": {
+          "description":"Yes",
+          "next":"toSK2.1"
+        },
+        "choice2": {
+          "description":"No",
+          "next":"staySeoul"
+        }
+      },
+      "footer":""
+    },
+    "staySeoul":{
+      "date":"",
+      "type":"",
       "description":"",
       "choices":{
         "choice1": {
@@ -129,7 +145,7 @@
           "next":""
         }
       },
-      "footer":""
+      "footer":"Battles of Seoul"
     },
     "SK1":{
       "date":"October 15, 1950",
