@@ -118,7 +118,7 @@
     "SK1":{
       "date":"October 15, 1950",
       "type":"question",
-      "description":"Do you want to go to South Korea now to keep far from the battlefront?",
+      "description":"Do you want to go to South Korea now?",
       "choices":{
         "choice1": {
           "description":"Yes",
@@ -267,7 +267,7 @@
       "description":"You don't know where is safer if there could be battles anywhere, so you choose to stay in North Korea. Where do you want to go now?",
       "choices":{
         "choice1": {
-          "description":"Keep away from cities",
+          "description":"Keep away from cities and villages",
           "next":"NK1.1"
         },
         "choice2": {
@@ -303,23 +303,23 @@
     "NK1.1":{
       "date":"Ending",
       "type":"ending",
-      "description":"Though bombings happen very often, the main air raid targets are the cities. You luckily survive in North Korea, while North Korea lost half of its original population. However, no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
+      "description":"Though bombings happen very often, the main air raid targets are the cities and villages. You luckily survive in North Korea, while North Korea lost half of its original population. However, no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
       "choices":{
       },
-      "footer":""
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
     },
     "NK1.2":{
       "date":"Ending",
       "type":"ending",
-      "description":"You are killed in an air raid from the U.S. air force. A large amount of North Korean cities are devastrated in air raids.",
+      "description":"You are killed in an air raid from the U.S. air force. A large amount of North Korean cities and villages are devastrated in air raids.",
       "choices":{
       },
-      "footer":""
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
     },
     "toSK":{
       "date":"",
       "type":"",
-      "description":"",
+      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea.",
       "choices":{
         "choice1": {
           "description":"",
