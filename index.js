@@ -303,7 +303,7 @@
     "NK1.1":{
       "date":"Ending",
       "type":"ending",
-      "description":"Though bombings happen very often, the main air raid targets are the cities. You luckily survive in North Korea, but no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
+      "description":"Though bombings happen very often, the main air raid targets are the cities. You luckily survive in North Korea, while North Korea lost half of its original population. However, no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
       "choices":{
       },
       "footer":""
@@ -313,6 +313,22 @@
       "type":"ending",
       "description":"You are killed in an air raid from the U.S. air force. A large amount of North Korean cities are devastrated in air raids.",
       "choices":{
+      },
+      "footer":""
+    },
+    "toSK":{
+      "date":"",
+      "type":"",
+      "description":"",
+      "choices":{
+        "choice1": {
+          "description":"",
+          "next":""
+        },
+        "choice2": {
+          "description":"",
+          "next":""
+        }
       },
       "footer":""
     },
