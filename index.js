@@ -311,7 +311,7 @@
     "NK1.2":{
       "date":"Ending",
       "type":"ending",
-      "description":"You are killed in an air raid from the U.S. air force. A large amount of North Korean cities and villages are devastrated in air raids.",
+      "description":"You are killed in an air raid from the U.S. air force. The majority of North Korean cities and towns are devastrated in air raids.",
       "choices":{
       },
       "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
