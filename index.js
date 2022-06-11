@@ -29,7 +29,7 @@
         },
         "choice1": {
           "description":"Hamhung",
-          "next":"915"
+          "next":"915-2"
         }
       },
       "footer":"Image edited from: <a href='https://www.worldatlas.com/webimage/countrys/asia/outline/koreanpnout.htm'>worldatlas</a>",
@@ -71,6 +71,18 @@
         "choice1": {
           "description":"Continue",
           "next":"927"
+        }
+      },
+      "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'>The Korean War Chronology</a>"
+    },
+    "915-2":{
+      "date":"September 15, 1950",
+      "type":"info",
+      "description":"UN forces, mainly the U.S. forces, get involved today to help South Korea.",
+      "choices":{
+        "choice1": {
+          "description":"Continue",
+          "next":"101"
         }
       },
       "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'>The Korean War Chronology</a>"
@@ -251,7 +263,7 @@
     },
     "OE1":{
       "date":"Ending",
-      "type":"ending",
+      "type":"ending1",
       "description":"You arrive in Geoje Island. There, you no longer need to worry about flames of the war. But you still cannot find your family members anywhere even after the war ends. You guess they are left in North Korea. How are they now? You have no ideas about this. You wish they are not killed during the war, and maybe some day, you can meet them again.",
       "choices":{
       },
@@ -303,7 +315,7 @@
           "next":"NK1.1"
         },
         "choice2": {
-          "description":"Stay where you are now.",
+          "description":"Stay where you are now",
           "next":"NK1.2"
         }
       },
@@ -311,8 +323,8 @@
     },
     "toSK2.1":{
       "date":"Ending",
-      "type":"ending",
-      "description":"You and your family successfully arrive in Busan. Life is hard there with lots of refugees, but congratulation, at least you survives. Perhaps you can have a better life after the war ends.",
+      "type":"ending1",
+      "description":"You and your family successfully arrive in Busan. Life is hard there with lots of refugees, but congratulation, at least you are alive with your family. Perhaps you can have a better life after the war ends.",
       "choices":{
       },
       "footer":"Source: <a href='https://www.youtube.com/watch?v=dJWrPLGakt4'>70th anniversary of Korean War: How Busan became home to millions of refugees</a><br><a href='https://www.koreatimes.co.kr/www/news/special/2010/02/113_60003.html'>January 1951: Life of Korean War Refugees in Busan</a>"
@@ -326,7 +338,7 @@
     },
     "toSK2.3":{
       "date":"Ending",
-      "type":"ending",
+      "type":"ending1",
       "description":"You are hurt in a bombing, but finally arrive in Busan. Life is hard there with lots of refugees, but congratulation, at least you survives. Perhaps you can have a better life after the war ends.",
       "choices":{
       },
@@ -334,7 +346,7 @@
     },
     "NK1.1":{
       "date":"Ending",
-      "type":"ending",
+      "type":"ending1",
       "description":"Though bombings happen very often, the main air raid targets are the cities and villages. You luckily survive in North Korea, while North Korea lost half of its original population. However, no one outside can get your messages any more, and you cannot receive messages from the outside either. Do you like your life in North Korea? Maybe you like it, maybe you don't. Who knows.",
       "choices":{
       },
@@ -379,7 +391,7 @@
     "suspected":{
       "date":"Ending",
       "type":"ending",
-      "description":"When you arrive in South Korea, you are killed as a suspected communist",
+      "description":"When you arrive in South Korea, you are killed as a suspected communist.",
       "choices":{
       },
       "footer":"Source: <a href='http://peacehistory-usfp.org/korean-war/'>The Korean War: Barbarism Unleashed</a>"
@@ -435,7 +447,7 @@
     "NGR3":{
       "date":"July 27, 1950 Ending",
       "type":"ending",
-      "description":"You don't know what's happening but you see lots of American soldiers. They never stop shooting. Unforturnately, you are killed.",
+      "description":"You don't know what's happening, but you see lots of American soldiers. They never stop shooting. Unforturnately, you are killed.",
       "choices":{
       },
       "footer":"Source: <a href='https://en.wikipedia.org/wiki/No_Gun_Ri_massacre'>No Gun Ri massacre</a><br>Other related information: <a href='https://en.wikipedia.org/wiki/List_of_massacres_in_South_Korea'>List of massacres in South Korea</a><br> <a href='https://en.wikipedia.org/wiki/List_of_massacres_in_North_Korea'>List of massacres in North Korea</a>"
@@ -487,13 +499,21 @@
     qs("#past div").appendChild(past);
     // 创建新事件
     let next = data[cEvent].choices[cChoice].next;
-    let nEvent=data[next];
+    let nEvent = data[next];
     console.log(nEvent)
     generateBoard(next);
     if (nEvent["type"] === "ending") {
       generateBoard(next);
       hindBtn();
+    } else if (nEvent["type"] === "ending1") {
+      generateBoard(next);
+      ending();
+      hindBtn();
     }
+  }
+
+  function ending() {
+    qs("div#end").classList.toggle("hidden");
   }
 
   function endGame() {
@@ -510,6 +530,7 @@
 
   function generateBoard(event) {
     hindBtn();
+    qs("#end").classList.add("hidden");
     let current = data[event];
     qs("#current-date p").textContent=current.date;
     qs("#current > p").textContent=current.description;

@@ -49,7 +49,7 @@ button {
   width: 80%;
 }
 
-.past-date, #current-date {
+.past-date, #current-date, .end-time {
   font-weight: bolder;
   text-decoration: underline;
 }
