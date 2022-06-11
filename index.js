@@ -42,10 +42,26 @@
       "choices":{
         "choice1": {
           "description":"Continue",
-          "next":"927"
+          "next":"630"
         }
       },
       "footer":"Source: <a href='https://history.army.mil/reference/korea/kw-chrono.htm'The Korean War Chronology</a>"
+    },
+    "630":{
+      "date":"June 30, 1950",
+      "type":"question",
+      "description":"Do you want to go further south?",
+      "choices":{
+        "choice1": {
+          "description":"Yes",
+          "next":"village"
+        },
+        "choice2": {
+          "description":"No",
+          "next":"915"
+        }
+      },
+      "footer":""
     },
     "915":{
       "date":"September 15, 1950",
@@ -145,7 +161,7 @@
           "next":"SK2"
         }
       },
-      "footer":""
+      "footer":"Source: <a href='https://arsof-history.org/articles/v7n1_hungnam_page_1.html'>The Refugee Evacuation from HUngnam</a>"
     },
     "cn":{
       "date":"October 19, 1950",
@@ -191,7 +207,7 @@
     "ship4":{
       "date":"December 26, 1950",
       "type":"info",
-      "description":"You are on the ship SS Meredith Victory. You hope that you can see your family after the ship stops. The ship arrives in Busan now, but there are already too many refugees in Busan, so the ship of North Korean refugees has to continue its voyage to Geoje Island.",
+      "description":"You are on the ship SS Meredith Victory, which will be called the 'Ship of Miracles' later. You hope that you can see your family after the ship stops. The ship arrives in Busan now, but there are already too many refugees in Busan, so the ship of North Korean refugees has to continue its voyage to Geoje Island.",
       "choices":{
         "choice1": {
           "description":"Continue",
@@ -199,7 +215,7 @@
         },
       },
       "img":"img/crowd.jpeg",
-      "footer":"Image credit: U.S. Army"
+      "footer":"Image credit: U.S. Army<br>Source: <a href='https://www.wilsoncenter.org/article/ship-miracles-korea-1950'>Ship of Miracles: Korea 1950</a>"
     },
     "1224":{
       "date":"December 24, 1950",
@@ -279,26 +295,26 @@
     },
     "toSK2.1":{
       "date":"Ending",
-      "type":"",
-      "description":"You and your family successfully arrive in Busan.",
+      "type":"ending",
+      "description":"You and your family successfully arrive in Busan. Life is hard there with lots of refugees, but congratulation, at least you survives. Perhaps you can have a better life after the war ends.",
       "choices":{
       },
-      "footer":""
+      "footer":"Source: <a href='https://www.youtube.com/watch?v=dJWrPLGakt4'>70th anniversary of Korean War: How Busan became home to millions of refugees</a><br><a href='https://www.koreatimes.co.kr/www/news/special/2010/02/113_60003.html'>January 1951: Life of Korean War Refugees in Busan</a>"
     },
     "toSK2.2":{
       "date":"Ending",
       "type":"ending",
-      "description":"You are killed by the U.S. army as a suspicious communist",
+      "description":"You are killed by the U.S. army as a suspicious communist.",
       "choices":{},
       "footer":""
     },
     "toSK2.3":{
       "date":"Ending",
       "type":"ending",
-      "description":"You are hurt in a bombing, but finally arrive in Busan.",
+      "description":"You are hurt in a bombing, but finally arrive in Busan. Life is hard there with lots of refugees, but congratulation, at least you survives. Perhaps you can have a better life after the war ends.",
       "choices":{
       },
-      "footer":""
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea"
     },
     "NK1.1":{
       "date":"Ending",
@@ -317,9 +333,9 @@
       "footer":"Source: <a href='https://en.wikipedia.org/wiki/Bombing_of_North_Korea#Tonnage_dropped:_Korea_vs._World_War_II_and_Vietnam_War'>Bombing of North Korea</a>"
     },
     "toSK":{
-      "date":"November 5, 1950",
+      "date":"",
       "type":"",
-      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea. Today, you pass through a village. ",
+      "description":"You want to keep far from the battlefront, so you decide to go south to South Korea.",
       "choices":{
         "choice1": {
           "description":"",
@@ -332,21 +348,61 @@
       },
       "footer":""
     },
-    "":{
-      "date":"",
-      "type":"",
-      "description":"",
+    "village":{
+      "date":"July 25, 1950",
+      "type":"question",
+      "description":"Today, you pass through a village. Do you want to take a rest there",
       "choices":{
         "choice1": {
-          "description":"",
-          "next":""
+          "description":"Yes",
+          "next":"GNR1"
         },
         "choice2": {
-          "description":"",
+          "description":"No",
           "next":""
         }
       },
       "footer":""
+    },
+    "NGR1":{
+      "date":"July 25, 1950",
+      "type":"question",
+      "description":"How long do you plan to stay there?",
+      "choices":{
+        "choice1": {
+          "description":"Leave as soon as possible",
+          "next":"toSK2.1"
+        },
+        "choice2": {
+          "description":"Take a rest for 1 day",
+          "next":"NGR2"
+        },
+        "choice3": {
+          "description":"Take a rest for 2 days",
+          "next":"NGR3"
+        }
+      },
+      "footer":""
+    },
+    "NGR2":{
+      "date":"July 26, 1950",
+      "type":"info",
+      "description":"When you leave the village in the morning, you see several corpses. They seem to be refugees just like you and your family. You are so afraid that you run away as quickly as you can. Luckily, you do not meet any other crime this day.",
+      "choices":{
+        "choice1": {
+          "description":"Continue",
+          "next":"toSK2.1"
+        }
+      },
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/No_Gun_Ri_massacre'>No Gun Ri massacre</a>"
+    },
+    "NGR3":{
+      "date":"July 27, 1950 Ending",
+      "type":"ending",
+      "description":"You don't know what's happening but you see lots of American soldiers. They never stop shooting. Unforturnately, you are killed.",
+      "choices":{
+      },
+      "footer":"Source: <a href='https://en.wikipedia.org/wiki/No_Gun_Ri_massacre'>No Gun Ri massacre</a><br>Other related information: <a href='https://en.wikipedia.org/wiki/List_of_massacres_in_South_Korea'>List of massacres in South Korea</a><br> <a href='https://en.wikipedia.org/wiki/List_of_massacres_in_North_Korea'>List of massacres in North Korea</a>"
     },
     "BE1":{
       "date":"Ending",
